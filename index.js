@@ -81,7 +81,7 @@ const findDaysInMonth = (month, year) => {
 // function should return result of operation of num1 and num2 based on operation parameter.
 // If operation is invalid return string 'Invalid operation'
 const calculateResult = (num1, num2, operation) => {
-  
+
   switch (operation) {
     case 'add':
       return num1 + num2;
@@ -93,7 +93,6 @@ const calculateResult = (num1, num2, operation) => {
       return num1 / num2;
     case 'modulus':
       return num1 % num2;
-      break;
     default:
       return 'someunknownoperation is an invalid operation';
   }
@@ -105,7 +104,17 @@ const calculateResult = (num1, num2, operation) => {
 // Create multiply table multiplying all digits from 2 t0 9 on 1 - 10 and write result in string
 // Compare your result with string in test
 const getMultiplicationTable = () => {
- 
+
+  let result = '';
+    
+      for (let i = 2; i <= 9; i++) {
+        result +=`==== ${i} ==== \n`;
+        for (let j = 1; j <= 10; j++) {
+          result +=`${i} * ${j} = ${i * j} \n`;
+        }
+      }
+    
+      return result;
 };
 
 module.exports = {
