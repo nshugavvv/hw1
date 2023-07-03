@@ -14,7 +14,7 @@ const sum = (a, b) => {
  */
 // function should return true if number is even or false is number is not even
 const isNumberEven = (num) => {
-  if (num%2==0) {
+  if (num%2===0) {
     return true;
   } 
   else {
@@ -33,11 +33,11 @@ const isNumberEven = (num) => {
 // if num1 is equal to num2 return string 'num1 is equal to num2'
 const findLargestNumber = (num1, num2) => {
   if (num1 > num2) {
-    return num1 + ' is the largest number';
+    return `${num1} is the largest number`;
 } else if (num2 > num1) {
-    return num2 + ' is the largest number';
-} else if (num1 == num2) {
-    return num1 + ' is equal to ' + num2;
+    return `${num2} is the largest number`;
+} else if (num1 === num2) {
+    return`${num1} is equal to ${num2}`;
 }
 };
 
@@ -52,11 +52,11 @@ const findLargestNumber = (num1, num2) => {
 // if triangle is Scalene return string 'Scalene triangle'
 // if triangle is Isosceles return string 'Isosceles triangle'
 const findTriangleType = (side1, side2, side3) => {
-  if (side1 == side2 && side2 == side3){
+  if (side1 === side2 && side2 === side3){
     return 'Equilateral triangle'
-  } else if (side1 != side2 && side2 != side3 && side1 !=side3) {
+  } else if (side1 != side2 && side2 != side3 && side1 != side3) {
     return 'Scalene triangle';
-  } else if (side1 == side2 || side2 == side3 || side1 == side3) {
+  } else if (side1 === side2 || side2 === side3 || side1 === side3) {
     return 'Isosceles triangle';
 }
 };
