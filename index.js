@@ -69,7 +69,13 @@ const findTriangleType = (side1, side2, side3) => {
 // function should return amount of days in month with string 'The Month has X days'
 // If wrong month number provided return string 'Invalid Month of value X'
 const findDaysInMonth = (month, year) => {
-  
+  const daysInMonth = new Date(year, month, 0).getDate();
+
+  if (month >= 1 && month <= 12) {
+    return `The Month has ${daysInMonth} days`;
+  } else {
+    return `Invalid Month of value ${month}`;
+  }
 }
 
 /**
